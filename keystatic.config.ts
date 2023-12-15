@@ -10,6 +10,7 @@ export default config({
 			slugField: "title",
 			path: "content/posts/*",
 			format: { contentField: "content" },
+			entryLayout: "content",
 			schema: {
 				title: fields.slug({
 					name: {
@@ -54,6 +55,28 @@ export default config({
 						"Set this post as draft to prevent it from being published",
 					defaultValue: true,
 				}),
+				// SEO metadata fields
+				seo: fields.conditional(
+					fields.checkbox({
+						label: "Define custom SEO tags",
+						defaultValue: true,
+					}),
+					{
+						true: fields.object({
+							metaTitle: fields.text({
+								label: "Meta Title",
+								description: "The meta title of the post",
+							}),
+							metaDescription: fields.text({
+								label: "Meta Description",
+								description: "The meta description of the post",
+								multiline: true,
+							}),
+						}),
+						// Empty fields are useful to show... no fields!
+						false: fields.empty(),
+					}
+				),
 			},
 		}),
 		authors: collection({
