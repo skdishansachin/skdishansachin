@@ -82,6 +82,21 @@ export default config({
 					description: "The author of the post",
 					collection: "authors",
 				}),
+				tags: fields.array(
+					fields.relationship({
+						label: "Tags",
+						description: "The tags of the post",
+						collection: "tags",
+						validation: {
+							isRequired: true,
+						},
+					}),
+					{
+						label: "Tags",
+						itemLabel: (item) =>
+							item.value || "Please select a tag",
+					}
+				),
 			},
 		}),
 		authors: collection({
@@ -94,6 +109,34 @@ export default config({
 					name: {
 						label: "Name",
 						description: "The name of the author",
+					},
+				}),
+				createdAt: fields.date({
+					label: "Created At",
+					description: "The date this post was created",
+					validation: {
+						isRequired: true,
+					},
+				}),
+				updatedAt: fields.date({
+					label: "Updated At",
+					description: "The date this post was last updated",
+					validation: {
+						isRequired: false,
+					},
+				}),
+			},
+		}),
+		tags: collection({
+			label: "Tags",
+			slugField: "name",
+			format: { data: "json" },
+			path: "content/tags/*",
+			schema: {
+				name: fields.slug({
+					name: {
+						label: "Name",
+						description: "The name of the tag",
 					},
 				}),
 				createdAt: fields.date({
