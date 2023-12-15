@@ -1,7 +1,6 @@
 {
-  "name": "@keystatic/templates-nextjs",
-  "version": "0.0.15",
-  "license": "MIT",
+  "name": "@dishansa/dishansa",
+  "version": "0.0.1",
   "dependencies": {
     "@keystatic/core": "^0.2.0",
     "@keystatic/next": "^2.0.0",
