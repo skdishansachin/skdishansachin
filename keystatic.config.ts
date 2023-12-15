@@ -77,6 +77,11 @@ export default config({
 						false: fields.empty(),
 					}
 				),
+				author: fields.relationship({
+					label: "Author",
+					description: "The author of the post",
+					collection: "authors",
+				}),
 			},
 		}),
 		authors: collection({
