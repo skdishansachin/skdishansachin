@@ -56,5 +56,33 @@ export default config({
 				}),
 			},
 		}),
+		authors: collection({
+			label: "Authors",
+			slugField: "name",
+			format: { data: "json" },
+			path: "content/authors/*",
+			schema: {
+				name: fields.slug({
+					name: {
+						label: "Name",
+						description: "The name of the author",
+					},
+				}),
+				createdAt: fields.date({
+					label: "Created At",
+					description: "The date this post was created",
+					validation: {
+						isRequired: true,
+					},
+				}),
+				updatedAt: fields.date({
+					label: "Updated At",
+					description: "The date this post was last updated",
+					validation: {
+						isRequired: false,
+					},
+				}),
+			},
+		}),
 	},
 });
