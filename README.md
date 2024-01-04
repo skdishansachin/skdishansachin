@@ -1,4 +1,6 @@
 - 👋 Hi, I’m Dishan Sachin.
-- 🔭 I’m currently working on my personal projects.
+- 🔭 I’m currently working on my projects.
 - 🌱 I’m currently learning Java ☕.
-- 👯 I’m looking to collaborate on any open source project.
+- 👯 I’m looking to collaborate on any open-source project.
+- ✖  Follow me on [X](https://twitter.com/skdishansachin)
+- ✍ Write on [Hashnode](https://hashnode.com/@dishansa).
