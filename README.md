@@ -3,4 +3,3 @@
 - 🌱 I’m currently learning Java ☕.
 - 👯 I’m looking to collaborate on any open-source project.
 - ✖  Follow me on [X](https://twitter.com/skdishansachin)
-- ✍ Write on [Hashnode](https://hashnode.com/@skdishansachin).
